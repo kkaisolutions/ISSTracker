@@ -28,6 +28,7 @@
 		A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001140000000000000001 /* PlaceDistanceInsight.swift */; };
 		A10000150000000000000001 /* OrbitalInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001150000000000000001 /* OrbitalInsights.swift */; };
 		A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001160000000000000001 /* NearestPlaceResolver.swift */; };
+		A10000170000000000000001 /* NASAImageLibraryMediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001170000000000000001 /* NASAImageLibraryMediaService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A10001140000000000000001 /* PlaceDistanceInsight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDistanceInsight.swift; sourceTree = "<group>"; };
 		A10001150000000000000001 /* OrbitalInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsights.swift; sourceTree = "<group>"; };
 		A10001160000000000000001 /* NearestPlaceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceResolver.swift; sourceTree = "<group>"; };
+		A10001170000000000000001 /* NASAImageLibraryMediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageLibraryMediaService.swift; sourceTree = "<group>"; };
 		A10005010000000000000001 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 					A10001060000000000000001 /* ISSDataProviding.swift */,
 					A10001070000000000000001 /* LiveISSTelemetryService.swift */,
 					A10001160000000000000001 /* NearestPlaceResolver.swift */,
+					A10001170000000000000001 /* NASAImageLibraryMediaService.swift */,
 					A10001080000000000000001 /* MockMediaService.swift */,
 					A10001130000000000000001 /* PreviewData.swift */,
 				);
@@ -247,6 +250,7 @@
 					A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */,
 					A10000150000000000000001 /* OrbitalInsights.swift in Sources */,
 					A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */,
+					A10000170000000000000001 /* NASAImageLibraryMediaService.swift in Sources */,
 				);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

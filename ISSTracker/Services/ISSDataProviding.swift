@@ -22,7 +22,13 @@ struct AppServices {
     let nearestPlaceResolver: NearestPlaceResolving
     let mediaProvider: MediaProviding
 
-    static let livePreview = AppServices(
+    static let live = AppServices(
+        telemetryProvider: LiveISSTelemetryService(),
+        nearestPlaceResolver: NearestPlaceResolver(),
+        mediaProvider: NASAImageLibraryMediaService()
+    )
+
+    static let preview = AppServices(
         telemetryProvider: LiveISSTelemetryService(),
         nearestPlaceResolver: NearestPlaceResolver(),
         mediaProvider: MockMediaService()

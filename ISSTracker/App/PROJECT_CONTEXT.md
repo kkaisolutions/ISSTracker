@@ -8,7 +8,7 @@
 ## What This App Is
 - Native iOS app built with SwiftUI and MapKit.
 - Single-screen live ISS tracker with a full-screen hybrid globe/map as the primary experience.
-- Secondary full-screen details flow now shows a compact gallery of the latest orbital images.
+- Secondary full-screen details flow now shows a compact gallery of the latest NASA imagery related to the ISS.
 
 ## Current Product State
 - Live ISS telemetry is fetched from `wheretheiss.at`.
@@ -42,7 +42,8 @@
 - Media model: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Models/SpaceMedia.swift`
 - Telemetry service: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Services/LiveISSTelemetryService.swift`
 - Place resolver: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Services/NearestPlaceResolver.swift`
-- Media source: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Services/MockMediaService.swift`
+- Media source: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Services/NASAImageLibraryMediaService.swift`
+- Preview-only media source: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Services/MockMediaService.swift`
 - Preview gallery data: `/Users/kkaisolution/code/ISSTracker/ISSTracker/Services/PreviewData.swift`
 - Home view model: `/Users/kkaisolution/code/ISSTracker/ISSTracker/ViewModels/HomeViewModel.swift`
 - Media view model: `/Users/kkaisolution/code/ISSTracker/ISSTracker/ViewModels/MediaViewModel.swift`
@@ -54,7 +55,7 @@
 - `HomeViewModel` orchestrates polling and merges telemetry with nearest-place resolution.
 - `NearestPlaceResolver` owns reverse-geocoding policy, throttling, and caching.
 - `LiveISSTelemetryService` is the live transport and produces `TelemetrySnapshot`.
-- `MediaViewModel` loads the latest gallery payload for the details screen.
+- `MediaViewModel` reloads the gallery payload when details opens and supports manual refresh.
 - Views consume already-derived state rather than owning network or geocoder logic directly.
 
 ## Current Data Sources
@@ -63,23 +64,26 @@
   - `https://api.wheretheiss.at/v1/satellites/25544/positions?...`
 - Reverse geocoding:
   - Apple `CLGeocoder`
+- Gallery production imagery:
+  - NASA Image and Video Library search API (`images-api.nasa.gov`)
 - Gallery preview imagery:
-  - seeded remote placeholder images from `picsum.photos`
+  - seeded placeholder images from `picsum.photos` used only by preview/mock media
 - Country flag rendering:
-  - image assets derived from country code via remote Twemoji CDN URLs
+  - local flag glyph rendering from the country code, with a country-code fallback badge if a glyph cannot be rendered
 
 ## Important Current Behaviors
 - Dragging the map exits follow mode and switches into explore mode.
 - Re-enabling auto-follow recenters the camera while preserving the current viewing style as much as possible.
 - Nearest-place resolution now allows country-level placemarks for sparse island/ocean regions.
 - Map place labels are lightweight floating text with no background chrome.
-- Flags no longer rely on the simulator emoji font; the UI uses image-based flag assets.
+- Flags no longer rely on remote CDN image fetches.
 - `Details` opens the gallery, not a telemetry sheet.
+- Opening `Details` reloads the gallery instead of reusing stale media indefinitely.
 
 ## Known Limitations / Technical Debt
 - Nearest-place quality still depends on Apple geocoder heuristics.
-- Country flag images depend on runtime network access to the remote asset URL.
-- Gallery imagery is currently placeholder content, not a real NASA/ISS image feed.
+- Gallery results still depend on NASA search relevance, so some images may be ISS-adjacent rather than direct Earth-window captures.
+- Local flag rendering can still fall back to a country-code badge on runtimes where emoji glyph generation is incomplete.
 - A local populated-places index would be more reliable than geocoder-only place resolution.
 - MapKit label styling is still constrained compared with a custom map renderer.
 
@@ -90,8 +94,8 @@
   - `/Users/kkaisolution/code/ISSTracker/.skill-archive/isst_snapshot_2026-03-25_2013.tgz`
 
 ## Suggested Next Improvements
-- Replace placeholder gallery images with a real ISS/NASA image source.
-- Move flag assets local if network independence matters.
+- Improve gallery filtering/ranking if NASA search results are too broad.
+- If perfect flag fidelity is required on every runtime, bundle local flag assets instead of relying on local glyph rendering.
 - Replace reverse geocoding with a real populated-places dataset for more reliable nearest-place results.
 - Add a more deliberate stale/offline treatment for media as well as telemetry.
 - Consider separating preview/demo data from production data providers more explicitly.
@@ -126,6 +130,6 @@ Core files:
 Important caveats:
 - nearest-place still relies on Apple CLGeocoder
 - flags are rendered as remote image assets, not emoji text
-- gallery images are currently placeholder remote images
+- gallery images come from NASA Image Library in production and preview placeholders in previews
 - the old telemetry detail sheet and old test target were removed
 ```

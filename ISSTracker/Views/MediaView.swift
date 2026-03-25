@@ -25,10 +25,30 @@ struct MediaView: View {
                         .padding(.top, 12)
                         .padding(.bottom, 28)
                     }
+                    .refreshable {
+                        await viewModel.load(force: true)
+                    }
                 } else if let errorMessage = viewModel.errorMessage {
                     HUDCard {
-                        Text(errorMessage)
-                            .foregroundStyle(AppTheme.caution)
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(errorMessage)
+                                .foregroundStyle(AppTheme.caution)
+
+                            Button("Retry") {
+                                Task {
+                                    await viewModel.load(force: true)
+                                }
+                            }
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(AppTheme.textPrimary)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 10)
+                            .background(AppTheme.glassHeavy, in: Capsule())
+                            .overlay(
+                                Capsule()
+                                    .stroke(AppTheme.strokeStrong, lineWidth: 1)
+                            )
+                        }
                     }
                     .padding(16)
                 } else {
@@ -44,8 +64,7 @@ struct MediaView: View {
                 .padding(.top, 8)
         }
         .task {
-            guard viewModel.payload == nil else { return }
-            await viewModel.load()
+            await viewModel.load(force: true)
         }
     }
 
@@ -56,7 +75,7 @@ struct MediaView: View {
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(AppTheme.textPrimary)
 
-                Text("Most recent views from orbit")
+                Text("Latest NASA imagery")
                     .font(.caption)
                     .foregroundStyle(AppTheme.textSecondary)
             }

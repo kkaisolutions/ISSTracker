@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct ISSTrackerApp: App {
-    private let services = AppServices.livePreview
+    private let services = AppServices.live
 
     var body: some Scene {
         WindowGroup {
