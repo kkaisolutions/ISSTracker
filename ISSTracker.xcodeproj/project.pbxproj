@@ -23,24 +23,12 @@
 		A100000D0000000000000001 /* TelemetryStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010D0000000000000001 /* TelemetryStrip.swift */; };
 		A100000F0000000000000001 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010F0000000000000001 /* MediaView.swift */; };
 		A10000100000000000000001 /* HUDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001100000000000000001 /* HUDCard.swift */; };
-		A10000110000000000000001 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001110000000000000001 /* FormatterTests.swift */; };
 		A10000120000000000000001 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001120000000000000001 /* Formatters.swift */; };
 		A10000130000000000000001 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001130000000000000001 /* PreviewData.swift */; };
 		A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001140000000000000001 /* PlaceDistanceInsight.swift */; };
 		A10000150000000000000001 /* OrbitalInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001150000000000000001 /* OrbitalInsights.swift */; };
 		A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001160000000000000001 /* NearestPlaceResolver.swift */; };
-		A10000170000000000000001 /* OrbitalInsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001170000000000000001 /* OrbitalInsightsTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A10002010000000000000001 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A10003000000000000000001 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A10004010000000000000001;
-			remoteInfo = ISSTracker;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A10001000000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,26 +47,16 @@
 		A100010D0000000000000001 /* TelemetryStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryStrip.swift; sourceTree = "<group>"; };
 		A100010F0000000000000001 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		A10001100000000000000001 /* HUDCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDCard.swift; sourceTree = "<group>"; };
-		A10001110000000000000001 /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		A10001120000000000000001 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		A10001130000000000000001 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		A10001140000000000000001 /* PlaceDistanceInsight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDistanceInsight.swift; sourceTree = "<group>"; };
 		A10001150000000000000001 /* OrbitalInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsights.swift; sourceTree = "<group>"; };
 		A10001160000000000000001 /* NearestPlaceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceResolver.swift; sourceTree = "<group>"; };
-		A10001170000000000000001 /* OrbitalInsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsightsTests.swift; sourceTree = "<group>"; };
 		A10005010000000000000001 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10005020000000000000001 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10006010000000000000001 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A10006020000000000000001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				A10007020000000000000001 /* ISSTracker */,
-				A10007030000000000000001 /* ISSTrackerTests */,
 				A10007040000000000000001 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,20 +88,10 @@
 			path = ISSTracker;
 			sourceTree = "<group>";
 		};
-			A10007030000000000000001 /* ISSTrackerTests */ = {
-				isa = PBXGroup;
-				children = (
-					A10001110000000000000001 /* FormatterTests.swift */,
-					A10001170000000000000001 /* OrbitalInsightsTests.swift */,
-				);
-			path = ISSTrackerTests;
-			sourceTree = "<group>";
-		};
 		A10007040000000000000001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				A10005010000000000000001 /* ISSTracker.app */,
-				A10005020000000000000001 /* ISSTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,24 +178,6 @@
 			productReference = A10005010000000000000001 /* ISSTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A10004020000000000000001 /* ISSTrackerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A10008020000000000000001 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */;
-			buildPhases = (
-				A10009020000000000000001 /* Sources */,
-				A10006020000000000000001 /* Frameworks */,
-				A1000A020000000000000001 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A1000B010000000000000001 /* PBXTargetDependency */,
-			);
-			name = ISSTrackerTests;
-			productName = ISSTrackerTests;
-			productReference = A10005020000000000000001 /* ISSTrackerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,10 +190,6 @@
 				TargetAttributes = {
 					A10004010000000000000001 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					A10004020000000000000001 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = A10004010000000000000001;
 					};
 				};
 			};
@@ -262,7 +207,6 @@
 			projectRoot = "";
 			targets = (
 				A10004010000000000000001 /* ISSTracker */,
-				A10004020000000000000001 /* ISSTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,13 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000000000000000000000 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1000A020000000000000001 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,24 +250,7 @@
 				);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A10009020000000000000001 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-				files = (
-					A10000110000000000000001 /* FormatterTests.swift in Sources */,
-					A10000170000000000000001 /* OrbitalInsightsTests.swift in Sources */,
-				);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A1000B010000000000000001 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A10004010000000000000001 /* ISSTracker */;
-			targetProxy = A10002010000000000000001 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A1000C010000000000000001 /* Debug */ = {
@@ -485,52 +405,6 @@
 			};
 			name = Release;
 		};
-		A1000C050000000000000001 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISSTracker.app/ISSTracker";
-			};
-			name = Debug;
-		};
-		A1000C060000000000000001 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISSTracker.app/ISSTracker";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,15 +422,6 @@
 			buildConfigurations = (
 				A1000C030000000000000001 /* Debug */,
 				A1000C040000000000000001 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A10008020000000000000001 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1000C050000000000000001 /* Debug */,
-				A1000C060000000000000001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
