@@ -1,0 +1,35 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="122" y1="98" x2="900" y2="932" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132B59"/>
+      <stop offset="1" stop-color="#06101F"/>
+    </linearGradient>
+    <radialGradient id="earth" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(510 550) rotate(115) scale(350)">
+      <stop stop-color="#66E5FF"/>
+      <stop offset="0.55" stop-color="#2798F1"/>
+      <stop offset="1" stop-color="#10397F"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="184" y1="398" x2="840" y2="668" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9FDFF" stop-opacity="0.2"/>
+      <stop offset="0.5" stop-color="#E5F7FF"/>
+      <stop offset="1" stop-color="#B8E4FF" stop-opacity="0.24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="223" fill="url(#bg)"/>
+  <g opacity="0.65" fill="#D4ECFF">
+    <circle cx="182" cy="172" r="1.8"/><circle cx="238" cy="256" r="1.8"/><circle cx="804" cy="154" r="2"/><circle cx="894" cy="238" r="1.6"/>
+    <circle cx="130" cy="430" r="2.1"/><circle cx="212" cy="592" r="1.5"/><circle cx="846" cy="476" r="2.1"/><circle cx="915" cy="630" r="1.8"/>
+  </g>
+  <circle cx="507" cy="550" r="270" fill="url(#earth)"/>
+  <path d="M327 456C374 379 483 329 573 347C620 356 673 385 702 425C639 401 580 410 532 428C470 452 434 495 387 513C346 529 305 525 278 510C295 500 305 492 327 456Z" fill="#64E2B0" fill-opacity="0.34"/>
+  <path d="M557 617C618 598 678 559 715 516C709 608 652 692 558 736C507 760 446 772 385 765C436 735 490 690 557 617Z" fill="#53E2D8" fill-opacity="0.26"/>
+  <path d="M191 444C333 361 507 323 647 345C792 367 891 443 913 543C935 641 874 732 750 783C626 834 447 839 304 789C164 739 94 644 116 546C130 483 155 466 191 444Z" stroke="url(#ring)" stroke-width="30" stroke-linecap="round"/>
+  <g fill="#F7FBFF">
+    <rect x="692" y="404" width="86" height="28" rx="10"/>
+    <rect x="663" y="430" width="136" height="50" rx="22"/>
+    <rect x="628" y="446" width="44" height="14" rx="7" transform="rotate(-40 628 446)"/>
+    <rect x="796" y="446" width="44" height="14" rx="7" transform="rotate(40 796 446)"/>
+    <rect x="718" y="474" width="18" height="42" rx="9"/>
+  </g>
+  <circle cx="760" cy="464" r="11" fill="#8FEAFF"/>
+</svg>

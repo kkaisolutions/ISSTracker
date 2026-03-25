@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10001000000000000000000 /* Assets.xcassets */; };
+		A10000010000000000000001 /* ISSTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001010000000000000001 /* ISSTrackerApp.swift */; };
+		A10000020000000000000001 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001020000000000000001 /* RootView.swift */; };
+		A10000030000000000000001 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001030000000000000001 /* AppTheme.swift */; };
+		A10000040000000000000001 /* ISSTelemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001040000000000000001 /* ISSTelemetry.swift */; };
+		A10000050000000000000001 /* SpaceMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001050000000000000001 /* SpaceMedia.swift */; };
+		A10000060000000000000001 /* ISSDataProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001060000000000000001 /* ISSDataProviding.swift */; };
+		A10000070000000000000001 /* LiveISSTelemetryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001070000000000000001 /* LiveISSTelemetryService.swift */; };
+		A10000080000000000000001 /* MockMediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001080000000000000001 /* MockMediaService.swift */; };
+		A10000090000000000000001 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001090000000000000001 /* HomeViewModel.swift */; };
+		A100000A0000000000000001 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010A0000000000000001 /* MediaViewModel.swift */; };
+		A100000B0000000000000001 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010B0000000000000001 /* HomeView.swift */; };
+		A100000C0000000000000001 /* GlobeSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010C0000000000000001 /* GlobeSceneView.swift */; };
+		A100000D0000000000000001 /* TelemetryStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010D0000000000000001 /* TelemetryStrip.swift */; };
+		A100000F0000000000000001 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100010F0000000000000001 /* MediaView.swift */; };
+		A10000100000000000000001 /* HUDCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001100000000000000001 /* HUDCard.swift */; };
+		A10000110000000000000001 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001110000000000000001 /* FormatterTests.swift */; };
+		A10000120000000000000001 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001120000000000000001 /* Formatters.swift */; };
+		A10000130000000000000001 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001130000000000000001 /* PreviewData.swift */; };
+		A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001140000000000000001 /* PlaceDistanceInsight.swift */; };
+		A10000150000000000000001 /* OrbitalInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001150000000000000001 /* OrbitalInsights.swift */; };
+		A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001160000000000000001 /* NearestPlaceResolver.swift */; };
+		A10000170000000000000001 /* OrbitalInsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001170000000000000001 /* OrbitalInsightsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A10002010000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10003000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10004010000000000000001;
+			remoteInfo = ISSTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A10001000000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10001010000000000000001 /* ISSTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerApp.swift; sourceTree = "<group>"; };
+		A10001020000000000000001 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A10001030000000000000001 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		A10001040000000000000001 /* ISSTelemetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTelemetry.swift; sourceTree = "<group>"; };
+		A10001050000000000000001 /* SpaceMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceMedia.swift; sourceTree = "<group>"; };
+		A10001060000000000000001 /* ISSDataProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSDataProviding.swift; sourceTree = "<group>"; };
+		A10001070000000000000001 /* LiveISSTelemetryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveISSTelemetryService.swift; sourceTree = "<group>"; };
+		A10001080000000000000001 /* MockMediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMediaService.swift; sourceTree = "<group>"; };
+		A10001090000000000000001 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A100010A0000000000000001 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		A100010B0000000000000001 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A100010C0000000000000001 /* GlobeSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeSceneView.swift; sourceTree = "<group>"; };
+		A100010D0000000000000001 /* TelemetryStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryStrip.swift; sourceTree = "<group>"; };
+		A100010F0000000000000001 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		A10001100000000000000001 /* HUDCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDCard.swift; sourceTree = "<group>"; };
+		A10001110000000000000001 /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
+		A10001120000000000000001 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		A10001130000000000000001 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		A10001140000000000000001 /* PlaceDistanceInsight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDistanceInsight.swift; sourceTree = "<group>"; };
+		A10001150000000000000001 /* OrbitalInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsights.swift; sourceTree = "<group>"; };
+		A10001160000000000000001 /* NearestPlaceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceResolver.swift; sourceTree = "<group>"; };
+		A10001170000000000000001 /* OrbitalInsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsightsTests.swift; sourceTree = "<group>"; };
+		A10005010000000000000001 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10005020000000000000001 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10006010000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10006020000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10007010000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A10007020000000000000001 /* ISSTracker */,
+				A10007030000000000000001 /* ISSTrackerTests */,
+				A10007040000000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10007020000000000000001 /* ISSTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A10001000000000000000000 /* Assets.xcassets */,
+				A10007050000000000000001 /* App */,
+				A10007060000000000000001 /* Models */,
+				A10007070000000000000001 /* Services */,
+				A10007080000000000000001 /* ViewModels */,
+				A10007090000000000000001 /* Views */,
+				A100070A0000000000000001 /* Utilities */,
+			);
+			path = ISSTracker;
+			sourceTree = "<group>";
+		};
+			A10007030000000000000001 /* ISSTrackerTests */ = {
+				isa = PBXGroup;
+				children = (
+					A10001110000000000000001 /* FormatterTests.swift */,
+					A10001170000000000000001 /* OrbitalInsightsTests.swift */,
+				);
+			path = ISSTrackerTests;
+			sourceTree = "<group>";
+		};
+		A10007040000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10005010000000000000001 /* ISSTracker.app */,
+				A10005020000000000000001 /* ISSTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+			A10007050000000000000001 /* App */ = {
+				isa = PBXGroup;
+				children = (
+					A10001010000000000000001 /* ISSTrackerApp.swift */,
+					A10001020000000000000001 /* RootView.swift */,
+					A10001030000000000000001 /* AppTheme.swift */,
+				);
+			path = App;
+			sourceTree = "<group>";
+		};
+			A10007060000000000000001 /* Models */ = {
+				isa = PBXGroup;
+				children = (
+					A10001040000000000000001 /* ISSTelemetry.swift */,
+					A10001140000000000000001 /* PlaceDistanceInsight.swift */,
+					A10001050000000000000001 /* SpaceMedia.swift */,
+				);
+			path = Models;
+			sourceTree = "<group>";
+		};
+			A10007070000000000000001 /* Services */ = {
+				isa = PBXGroup;
+				children = (
+					A10001060000000000000001 /* ISSDataProviding.swift */,
+					A10001070000000000000001 /* LiveISSTelemetryService.swift */,
+					A10001160000000000000001 /* NearestPlaceResolver.swift */,
+					A10001080000000000000001 /* MockMediaService.swift */,
+					A10001130000000000000001 /* PreviewData.swift */,
+				);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A10007080000000000000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A10001090000000000000001 /* HomeViewModel.swift */,
+				A100010A0000000000000001 /* MediaViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A10007090000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A100010B0000000000000001 /* HomeView.swift */,
+				A100010C0000000000000001 /* GlobeSceneView.swift */,
+				A100010D0000000000000001 /* TelemetryStrip.swift */,
+				A100010F0000000000000001 /* MediaView.swift */,
+				A10001100000000000000001 /* HUDCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+			A100070A0000000000000001 /* Utilities */ = {
+				isa = PBXGroup;
+				children = (
+					A10001120000000000000001 /* Formatters.swift */,
+					A10001150000000000000001 /* OrbitalInsights.swift */,
+				);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10004010000000000000001 /* ISSTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10008010000000000000001 /* Build configuration list for PBXNativeTarget "ISSTracker" */;
+			buildPhases = (
+				A10009010000000000000001 /* Sources */,
+				A10006010000000000000001 /* Frameworks */,
+				A1000A010000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISSTracker;
+			productName = ISSTracker;
+			productReference = A10005010000000000000001 /* ISSTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A10004020000000000000001 /* ISSTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10008020000000000000001 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */;
+			buildPhases = (
+				A10009020000000000000001 /* Sources */,
+				A10006020000000000000001 /* Frameworks */,
+				A1000A020000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1000B010000000000000001 /* PBXTargetDependency */,
+			);
+			name = ISSTrackerTests;
+			productName = ISSTrackerTests;
+			productReference = A10005020000000000000001 /* ISSTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10003000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					A10004010000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A10004020000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A10004010000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = A10008000000000000000001 /* Build configuration list for PBXProject "ISSTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10007010000000000000001;
+			productRefGroup = A10007040000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10004010000000000000001 /* ISSTracker */,
+				A10004020000000000000001 /* ISSTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1000A010000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000000 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1000A020000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10009010000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+				files = (
+					A10000010000000000000001 /* ISSTrackerApp.swift in Sources */,
+					A10000020000000000000001 /* RootView.swift in Sources */,
+					A10000030000000000000001 /* AppTheme.swift in Sources */,
+					A10000040000000000000001 /* ISSTelemetry.swift in Sources */,
+					A10000050000000000000001 /* SpaceMedia.swift in Sources */,
+					A10000060000000000000001 /* ISSDataProviding.swift in Sources */,
+					A10000070000000000000001 /* LiveISSTelemetryService.swift in Sources */,
+					A10000080000000000000001 /* MockMediaService.swift in Sources */,
+					A10000090000000000000001 /* HomeViewModel.swift in Sources */,
+					A100000A0000000000000001 /* MediaViewModel.swift in Sources */,
+				A100000B0000000000000001 /* HomeView.swift in Sources */,
+				A100000C0000000000000001 /* GlobeSceneView.swift in Sources */,
+				A100000D0000000000000001 /* TelemetryStrip.swift in Sources */,
+				A100000F0000000000000001 /* MediaView.swift in Sources */,
+					A10000100000000000000001 /* HUDCard.swift in Sources */,
+					A10000120000000000000001 /* Formatters.swift in Sources */,
+					A10000130000000000000001 /* PreviewData.swift in Sources */,
+					A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */,
+					A10000150000000000000001 /* OrbitalInsights.swift in Sources */,
+					A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */,
+				);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10009020000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+				files = (
+					A10000110000000000000001 /* FormatterTests.swift in Sources */,
+					A10000170000000000000001 /* OrbitalInsightsTests.swift in Sources */,
+				);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1000B010000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10004010000000000000001 /* ISSTracker */;
+			targetProxy = A10002010000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1000C010000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1000C020000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A1000C030000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKFN7XX524;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1000C040000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKFN7XX524;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1000C050000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISSTracker.app/ISSTracker";
+			};
+			name = Debug;
+		};
+		A1000C060000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISSTracker.app/ISSTracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10008000000000000000001 /* Build configuration list for PBXProject "ISSTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000C010000000000000001 /* Debug */,
+				A1000C020000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10008010000000000000001 /* Build configuration list for PBXNativeTarget "ISSTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000C030000000000000001 /* Debug */,
+				A1000C040000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10008020000000000000001 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000C050000000000000001 /* Debug */,
+				A1000C060000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10003000000000000000001 /* Project object */;
+}

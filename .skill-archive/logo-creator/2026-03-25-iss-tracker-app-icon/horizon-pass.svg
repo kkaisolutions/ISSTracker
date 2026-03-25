@@ -1,0 +1,34 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="126" y1="84" x2="896" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2245"/>
+      <stop offset="1" stop-color="#040B17"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="216" y1="609" x2="826" y2="478" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72E4FF" stop-opacity="0"/>
+      <stop offset="0.26" stop-color="#92F0FF"/>
+      <stop offset="0.68" stop-color="#FFA85B"/>
+      <stop offset="1" stop-color="#FFF2C9" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="earth" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 841) scale(554 338)">
+      <stop stop-color="#256ED1"/>
+      <stop offset="1" stop-color="#061635"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="223" fill="url(#bg)"/>
+  <g opacity="0.72" fill="#D4ECFF">
+    <circle cx="194" cy="158" r="2"/><circle cx="270" cy="286" r="1.8"/><circle cx="840" cy="164" r="1.7"/><circle cx="900" cy="318" r="2"/>
+    <circle cx="154" cy="422" r="1.6"/><circle cx="820" cy="442" r="2.1"/><circle cx="886" cy="558" r="1.7"/>
+  </g>
+  <path d="M-26 1038C20 768 229 563 512 563C795 563 1004 768 1050 1038H-26Z" fill="url(#earth)"/>
+  <path d="M214 607C332 579 444 566 582 572C678 576 760 592 826 619" stroke="url(#horizon)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M331 672C425 691 591 693 709 662" stroke="#90F1FF" stroke-opacity="0.14" stroke-width="8" stroke-linecap="round"/>
+  <path d="M332 331L693 510" stroke="#F4FBFF" stroke-opacity="0.22" stroke-width="28" stroke-linecap="round"/>
+  <g fill="#F6FBFF">
+    <rect x="572" y="420" width="90" height="28" rx="10" transform="rotate(25 572 420)"/>
+    <rect x="545" y="446" width="140" height="50" rx="22" transform="rotate(25 545 446)"/>
+    <rect x="512" y="457" width="44" height="14" rx="7" transform="rotate(-18 512 457)"/>
+    <rect x="688" y="522" width="44" height="14" rx="7" transform="rotate(69 688 522)"/>
+    <rect x="610" y="485" width="18" height="46" rx="9" transform="rotate(25 610 485)"/>
+  </g>
+</svg>

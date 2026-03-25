@@ -1,0 +1,37 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="114" y1="88" x2="914" y2="926" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10254E"/>
+      <stop offset="1" stop-color="#040914"/>
+    </linearGradient>
+    <radialGradient id="disc" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) scale(298)">
+      <stop stop-color="#14386D"/>
+      <stop offset="1" stop-color="#091326"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="304" y1="304" x2="718" y2="718" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75EBFF"/>
+      <stop offset="1" stop-color="#91A4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="223" fill="url(#bg)"/>
+  <circle cx="512" cy="512" r="298" fill="url(#disc)" stroke="#99EDFF" stroke-opacity="0.14" stroke-width="6"/>
+  <circle cx="512" cy="512" r="242" stroke="#95EAFF" stroke-opacity="0.24" stroke-width="5"/>
+  <path d="M512 248V286" stroke="#D8FAFF" stroke-opacity="0.74" stroke-width="10" stroke-linecap="round"/>
+  <path d="M512 738V776" stroke="#D8FAFF" stroke-opacity="0.74" stroke-width="10" stroke-linecap="round"/>
+  <path d="M248 512H286" stroke="#D8FAFF" stroke-opacity="0.74" stroke-width="10" stroke-linecap="round"/>
+  <path d="M738 512H776" stroke="#D8FAFF" stroke-opacity="0.74" stroke-width="10" stroke-linecap="round"/>
+  <path d="M354 354L378 378" stroke="#D8FAFF" stroke-opacity="0.36" stroke-width="8" stroke-linecap="round"/>
+  <path d="M646 646L670 670" stroke="#D8FAFF" stroke-opacity="0.36" stroke-width="8" stroke-linecap="round"/>
+  <path d="M670 354L646 378" stroke="#D8FAFF" stroke-opacity="0.36" stroke-width="8" stroke-linecap="round"/>
+  <path d="M354 670L378 646" stroke="#D8FAFF" stroke-opacity="0.36" stroke-width="8" stroke-linecap="round"/>
+  <path d="M330 602C385 671 466 710 548 707C628 704 701 662 744 597" stroke="url(#ring)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M440 570L655 392" stroke="#F5FBFF" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="655" cy="392" r="24" fill="#FFAA56"/>
+  <g fill="#F6FBFF">
+    <rect x="607" y="341" width="80" height="24" rx="10" transform="rotate(-18 607 341)"/>
+    <rect x="584" y="364" width="124" height="44" rx="18" transform="rotate(-18 584 364)"/>
+    <rect x="554" y="374" width="40" height="12" rx="6" transform="rotate(-52 554 374)"/>
+    <rect x="705" y="415" width="40" height="12" rx="6" transform="rotate(16 705 415)"/>
+    <rect x="633" y="397" width="18" height="40" rx="9" transform="rotate(-18 633 397)"/>
+  </g>
+</svg>
