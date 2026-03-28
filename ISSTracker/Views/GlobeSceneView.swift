@@ -63,20 +63,6 @@ struct GlobeSceneView: View {
                                     .stroke(Color.white.opacity(0.5), lineWidth: 1)
                             )
                     }
-
-                    Annotation(nearestPlace.title, coordinate: coordinate.locationCoordinate, anchor: .center) {
-                        HStack(alignment: .firstTextBaseline, spacing: 6) {
-                            FlagImageView(place: nearestPlace, size: 18)
-
-                            Text(nearestPlace.title)
-                                .font(.caption.weight(.semibold))
-                                .lineLimit(2)
-                                .multilineTextAlignment(.leading)
-                        }
-                        .foregroundStyle(.white)
-                        .shadow(color: .black.opacity(0.55), radius: 4, y: 2)
-                        .offset(x: 0, y: 40)
-                    }
                 }
 
                 Annotation(coordinate: telemetry.coordinate.locationCoordinate, anchor: .center) {

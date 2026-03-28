@@ -1,81 +1,66 @@
-import CoreLocation
 import Foundation
 
 final class NearestPlaceResolver: NearestPlaceResolving {
     private enum Policy {
-        static let geocodeMovementThresholdKilometers = 250.0
-        static let minimumSecondsBetweenGeocodeAttempts: TimeInterval = 30
-        static let geocodeBackoffAfterFailure: TimeInterval = 90
+        static let lookupMovementThresholdKilometers = 50.0
     }
 
-    private let geocoder = CLGeocoder()
-    private var requestID = 0
-    private var lastGeocodedCoordinate: GeoCoordinate?
-    private var lastAttemptAt: Date?
-    private var nextAllowedAt: Date = .distantPast
+    private let cityRecords = OfflineCityIndex.shared
+    private var lastResolvedCoordinate: GeoCoordinate?
     private var cachedInsight: PlaceDistanceInsight?
 
     func resolve(for coordinate: GeoCoordinate) async -> PlaceResolutionResult {
-        let now = Date()
-
-        if let cachedInsight {
-            self.cachedInsight = cachedInsight.updatingDistance(from: coordinate)
-        }
-
-        let distanceFromLastGeocode = lastGeocodedCoordinate.map {
+        let distanceFromLastLookup = lastResolvedCoordinate.map {
             OrbitalInsights.haversineKilometers(from: coordinate, to: $0)
         } ?? .infinity
-        let secondsSinceLastAttempt = lastAttemptAt.map { now.timeIntervalSince($0) } ?? .infinity
-        let shouldRefreshGeocode =
-            distanceFromLastGeocode >= Policy.geocodeMovementThresholdKilometers
-            && secondsSinceLastAttempt >= Policy.minimumSecondsBetweenGeocodeAttempts
-            && now >= nextAllowedAt
 
-        guard shouldRefreshGeocode else {
-            if let cachedInsight {
-                return PlaceResolutionResult(insight: cachedInsight, status: .resolved)
-            }
-            return PlaceResolutionResult(
-                insight: nil,
-                status: lastAttemptAt == nil ? .resolving : .unavailable
-            )
+        if distanceFromLastLookup < Policy.lookupMovementThresholdKilometers,
+           let cachedInsight = cachedInsight?.updatingDistance(from: coordinate) {
+            self.cachedInsight = cachedInsight
+            return PlaceResolutionResult(insight: cachedInsight, status: .resolved)
         }
 
-        requestID += 1
-        let currentRequestID = requestID
-        lastAttemptAt = now
-        geocoder.cancelGeocode()
-
-        do {
-            for searchCoordinate in OrbitalInsights.settlementSearchCoordinates(from: coordinate) {
-                let placemarks = try await geocoder.reverseGeocodeLocation(
-                    CLLocation(latitude: searchCoordinate.latitude, longitude: searchCoordinate.longitude)
-                )
-
-                guard currentRequestID == requestID else {
-                    return PlaceResolutionResult(insight: cachedInsight, status: .resolved)
-                }
-
-                if let place = placemarks.first,
-                   OrbitalInsights.isSettlementPlacemark(place),
-                   let insight = OrbitalInsights.placeInsight(from: place, issCoordinate: coordinate) {
-                    cachedInsight = insight
-                    lastGeocodedCoordinate = coordinate
-                    nextAllowedAt = now.addingTimeInterval(Policy.minimumSecondsBetweenGeocodeAttempts)
-                    return PlaceResolutionResult(insight: insight, status: .resolved)
-                }
-            }
-
-            cachedInsight = nil
-            nextAllowedAt = now.addingTimeInterval(Policy.geocodeBackoffAfterFailure)
-            return PlaceResolutionResult(insight: nil, status: .unavailable)
-        } catch {
-            guard currentRequestID == requestID else {
+        guard let nearest = nearestCity(to: coordinate) else {
+            if let cachedInsight = cachedInsight?.updatingDistance(from: coordinate) {
+                self.cachedInsight = cachedInsight
                 return PlaceResolutionResult(insight: cachedInsight, status: .resolved)
             }
-            cachedInsight = nil
-            nextAllowedAt = now.addingTimeInterval(Policy.geocodeBackoffAfterFailure)
             return PlaceResolutionResult(insight: nil, status: .unavailable)
         }
+
+        let insight = PlaceDistanceInsight(
+            placeName: placeName(for: nearest),
+            distanceKilometers: OrbitalInsights.haversineKilometers(from: coordinate, to: nearest.coordinate),
+            countryCode: nearest.cc,
+            coordinate: nearest.coordinate
+        )
+        cachedInsight = insight
+        lastResolvedCoordinate = coordinate
+        return PlaceResolutionResult(insight: insight, status: .resolved)
+    }
+
+    private func nearestCity(to coordinate: GeoCoordinate) -> OfflineCityRecord? {
+        var bestRecord: OfflineCityRecord?
+        var bestDistance = Double.greatestFiniteMagnitude
+
+        for record in cityRecords {
+            let distance = OrbitalInsights.haversineKilometers(from: coordinate, to: record.coordinate)
+            if distance < bestDistance {
+                bestDistance = distance
+                bestRecord = record
+            }
+        }
+
+        return bestRecord
+    }
+
+    private func placeName(for record: OfflineCityRecord) -> String {
+        guard let country = Locale(identifier: "en_US_POSIX")
+            .localizedString(forRegionCode: record.cc),
+              !country.isEmpty else {
+            return record.n
+        }
+
+        return "\(record.n), \(country)"
     }
 }

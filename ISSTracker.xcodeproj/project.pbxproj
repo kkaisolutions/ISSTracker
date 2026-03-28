@@ -29,7 +29,21 @@
 		A10000150000000000000001 /* OrbitalInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001150000000000000001 /* OrbitalInsights.swift */; };
 		A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001160000000000000001 /* NearestPlaceResolver.swift */; };
 		A10000170000000000000001 /* NASAImageLibraryMediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001170000000000000001 /* NASAImageLibraryMediaService.swift */; };
+		A10000180000000000000001 /* FormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001180000000000000001 /* FormattersTests.swift */; };
+		A10000190000000000000001 /* OrbitalInsightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10001190000000000000001 /* OrbitalInsightsTests.swift */; };
+		A100001A0000000000000001 /* OfflineCityIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100011A0000000000000001 /* OfflineCityIndex.swift */; };
+		A100001B0000000000000001 /* world-cities-liepaja-and-above.json in Resources */ = {isa = PBXBuildFile; fileRef = A100011B0000000000000001 /* world-cities-liepaja-and-above.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1000D010000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10003000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10004010000000000000001;
+			remoteInfo = ISSTracker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A10001000000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,11 +68,23 @@
 		A10001150000000000000001 /* OrbitalInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsights.swift; sourceTree = "<group>"; };
 		A10001160000000000000001 /* NearestPlaceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaceResolver.swift; sourceTree = "<group>"; };
 		A10001170000000000000001 /* NASAImageLibraryMediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageLibraryMediaService.swift; sourceTree = "<group>"; };
+		A10001180000000000000001 /* FormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersTests.swift; sourceTree = "<group>"; };
+		A10001190000000000000001 /* OrbitalInsightsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitalInsightsTests.swift; sourceTree = "<group>"; };
+		A100011A0000000000000001 /* OfflineCityIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineCityIndex.swift; sourceTree = "<group>"; };
+		A100011B0000000000000001 /* world-cities-liepaja-and-above.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "world-cities-liepaja-and-above.json"; sourceTree = "<group>"; };
 		A10005010000000000000001 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10005020000000000000001 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10006010000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10006020000000000000001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A10007020000000000000001 /* ISSTracker */,
+				A10007030000000000000001 /* ISSTrackerTests */,
 				A10007040000000000000001 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,48 +113,60 @@
 				A10007080000000000000001 /* ViewModels */,
 				A10007090000000000000001 /* Views */,
 				A100070A0000000000000001 /* Utilities */,
+				A100070B0000000000000001 /* Resources */,
 			);
 			path = ISSTracker;
+			sourceTree = "<group>";
+		};
+		A10007030000000000000001 /* ISSTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A10001180000000000000001 /* FormattersTests.swift */,
+				A10001190000000000000001 /* OrbitalInsightsTests.swift */,
+			);
+			path = ISSTrackerTests;
 			sourceTree = "<group>";
 		};
 		A10007040000000000000001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				A10005010000000000000001 /* ISSTracker.app */,
+				A10005020000000000000001 /* ISSTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-			A10007050000000000000001 /* App */ = {
-				isa = PBXGroup;
-				children = (
-					A10001010000000000000001 /* ISSTrackerApp.swift */,
-					A10001020000000000000001 /* RootView.swift */,
-					A10001030000000000000001 /* AppTheme.swift */,
-				);
+		A10007050000000000000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A10001010000000000000001 /* ISSTrackerApp.swift */,
+				A10001020000000000000001 /* RootView.swift */,
+				A10001030000000000000001 /* AppTheme.swift */,
+			);
 			path = App;
 			sourceTree = "<group>";
 		};
-			A10007060000000000000001 /* Models */ = {
-				isa = PBXGroup;
-				children = (
-					A10001040000000000000001 /* ISSTelemetry.swift */,
-					A10001140000000000000001 /* PlaceDistanceInsight.swift */,
-					A10001050000000000000001 /* SpaceMedia.swift */,
-				);
+		A10007060000000000000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10001040000000000000001 /* ISSTelemetry.swift */,
+				A10001140000000000000001 /* PlaceDistanceInsight.swift */,
+				A10001050000000000000001 /* SpaceMedia.swift */,
+			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-			A10007070000000000000001 /* Services */ = {
-				isa = PBXGroup;
-				children = (
-					A10001060000000000000001 /* ISSDataProviding.swift */,
-					A10001070000000000000001 /* LiveISSTelemetryService.swift */,
-					A10001160000000000000001 /* NearestPlaceResolver.swift */,
-					A10001170000000000000001 /* NASAImageLibraryMediaService.swift */,
-					A10001080000000000000001 /* MockMediaService.swift */,
-					A10001130000000000000001 /* PreviewData.swift */,
-				);
+		A10007070000000000000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A10001060000000000000001 /* ISSDataProviding.swift */,
+				A10001070000000000000001 /* LiveISSTelemetryService.swift */,
+				A10001160000000000000001 /* NearestPlaceResolver.swift */,
+				A100011A0000000000000001 /* OfflineCityIndex.swift */,
+				A10001170000000000000001 /* NASAImageLibraryMediaService.swift */,
+				A10001080000000000000001 /* MockMediaService.swift */,
+				A10001130000000000000001 /* PreviewData.swift */,
+			);
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -152,13 +191,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-			A100070A0000000000000001 /* Utilities */ = {
-				isa = PBXGroup;
-				children = (
-					A10001120000000000000001 /* Formatters.swift */,
-					A10001150000000000000001 /* OrbitalInsights.swift */,
-				);
+		A100070A0000000000000001 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A10001120000000000000001 /* Formatters.swift */,
+				A10001150000000000000001 /* OrbitalInsights.swift */,
+			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A100070B0000000000000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A100011B0000000000000001 /* world-cities-liepaja-and-above.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +228,23 @@
 			productReference = A10005010000000000000001 /* ISSTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A10004020000000000000001 /* ISSTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10008020000000000000001 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */;
+			buildPhases = (
+				A10009020000000000000001 /* Sources */,
+				A10006020000000000000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1000E010000000000000001 /* PBXTargetDependency */,
+			);
+			name = ISSTrackerTests;
+			productName = ISSTrackerTests;
+			productReference = A10005020000000000000001 /* ISSTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,10 +253,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					A10004010000000000000001 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					A10004020000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A10004010000000000000001;
 					};
 				};
 			};
@@ -210,6 +278,7 @@
 			projectRoot = "";
 			targets = (
 				A10004010000000000000001 /* ISSTracker */,
+				A10004020000000000000001 /* ISSTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000000000000000000000 /* Assets.xcassets in Resources */,
+				A100001B0000000000000001 /* world-cities-liepaja-and-above.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,38 +299,57 @@
 		A10009010000000000000001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-				files = (
-					A10000010000000000000001 /* ISSTrackerApp.swift in Sources */,
-					A10000020000000000000001 /* RootView.swift in Sources */,
-					A10000030000000000000001 /* AppTheme.swift in Sources */,
-					A10000040000000000000001 /* ISSTelemetry.swift in Sources */,
-					A10000050000000000000001 /* SpaceMedia.swift in Sources */,
-					A10000060000000000000001 /* ISSDataProviding.swift in Sources */,
-					A10000070000000000000001 /* LiveISSTelemetryService.swift in Sources */,
-					A10000080000000000000001 /* MockMediaService.swift in Sources */,
-					A10000090000000000000001 /* HomeViewModel.swift in Sources */,
-					A100000A0000000000000001 /* MediaViewModel.swift in Sources */,
+			files = (
+				A10000010000000000000001 /* ISSTrackerApp.swift in Sources */,
+				A10000020000000000000001 /* RootView.swift in Sources */,
+				A10000030000000000000001 /* AppTheme.swift in Sources */,
+				A10000040000000000000001 /* ISSTelemetry.swift in Sources */,
+				A10000050000000000000001 /* SpaceMedia.swift in Sources */,
+				A10000060000000000000001 /* ISSDataProviding.swift in Sources */,
+				A10000070000000000000001 /* LiveISSTelemetryService.swift in Sources */,
+				A10000080000000000000001 /* MockMediaService.swift in Sources */,
+				A10000090000000000000001 /* HomeViewModel.swift in Sources */,
+				A100000A0000000000000001 /* MediaViewModel.swift in Sources */,
 				A100000B0000000000000001 /* HomeView.swift in Sources */,
 				A100000C0000000000000001 /* GlobeSceneView.swift in Sources */,
 				A100000D0000000000000001 /* TelemetryStrip.swift in Sources */,
 				A100000F0000000000000001 /* MediaView.swift in Sources */,
-					A10000100000000000000001 /* HUDCard.swift in Sources */,
-					A10000120000000000000001 /* Formatters.swift in Sources */,
-					A10000130000000000000001 /* PreviewData.swift in Sources */,
-					A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */,
-					A10000150000000000000001 /* OrbitalInsights.swift in Sources */,
-					A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */,
-					A10000170000000000000001 /* NASAImageLibraryMediaService.swift in Sources */,
-				);
+				A10000100000000000000001 /* HUDCard.swift in Sources */,
+				A10000120000000000000001 /* Formatters.swift in Sources */,
+				A10000130000000000000001 /* PreviewData.swift in Sources */,
+				A10000140000000000000001 /* PlaceDistanceInsight.swift in Sources */,
+				A10000150000000000000001 /* OrbitalInsights.swift in Sources */,
+				A10000160000000000000001 /* NearestPlaceResolver.swift in Sources */,
+				A100001A0000000000000001 /* OfflineCityIndex.swift in Sources */,
+				A10000170000000000000001 /* NASAImageLibraryMediaService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10009020000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000180000000000000001 /* FormattersTests.swift in Sources */,
+				A10000190000000000000001 /* OrbitalInsightsTests.swift in Sources */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1000E010000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10004010000000000000001 /* ISSTracker */;
+			targetProxy = A1000D010000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A1000C010000000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -283,6 +372,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UKFN7XX524;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -312,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -334,6 +425,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UKFN7XX524;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -359,7 +451,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UKFN7XX524;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -387,7 +478,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UKFN7XX524;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -409,6 +499,56 @@
 			};
 			name = Release;
 		};
+		A1000C050000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISSTracker.app/ISSTracker";
+			};
+			name = Debug;
+		};
+		A1000C060000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codex.ISSTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ISSTracker.app/ISSTracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -426,6 +566,15 @@
 			buildConfigurations = (
 				A1000C030000000000000001 /* Debug */,
 				A1000C040000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10008020000000000000001 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000C050000000000000001 /* Debug */,
+				A1000C060000000000000001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

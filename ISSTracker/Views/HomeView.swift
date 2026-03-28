@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @ObservedObject var viewModel: HomeViewModel
     @ObservedObject var mediaViewModel: MediaViewModel
     @State private var showingMediaFeed = false
@@ -49,8 +50,13 @@ struct HomeView: View {
                     .padding(.bottom, 6)
                 }
             }
-            .task {
-                viewModel.start()
+            .onChange(of: scenePhase, initial: true) { _, newPhase in
+                switch newPhase {
+                case .active:
+                    viewModel.start()
+                default:
+                    viewModel.stop()
+                }
             }
             .onDisappear {
                 viewModel.stop()
